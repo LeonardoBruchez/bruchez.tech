@@ -42,7 +42,7 @@ export default function HomePage({ navigate }: HomePageProps) {
           className="nav__brand"
           onClick={makeLinkHandler(navigate, "/")}
         >
-          <span className="nav__brand-mark">B3D</span>
+          <img className="nav__brand-mark" src="/logo.jpeg" alt="Bruchez3D" />
           <span>
             Bruchez<strong>3D</strong>
           </span>

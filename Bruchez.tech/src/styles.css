@@ -1,25 +1,23 @@
 :root {
   color-scheme: dark;
-  --bg: #0a0714;
-  --bg-soft: #120d24;
+  --bg: #08090a;
+  --bg-soft: #101312;
   --surface: rgba(255, 255, 255, 0.045);
   --surface-strong: rgba(255, 255, 255, 0.08);
   --line: rgba(255, 255, 255, 0.1);
-  --text: #f4f1fb;
-  --muted: #a9a2c4;
+  --text: #f2f4f2;
+  --muted: #9aa39d;
 
-  --violet: #8b5cf6;
-  --magenta: #ec4899;
+  --lime: #a3e635;
+  --lime-strong: #84cc16;
   --cyan: #22d3ee;
-  --orange: #fb923c;
-  --gold: #fbbf24;
+  --cyan-strong: #06b6d4;
   --whatsapp: #25d366;
   --whatsapp-strong: #1fb457;
 
-  --gradient-brand: linear-gradient(120deg, var(--violet), var(--magenta) 55%, var(--orange));
-  --gradient-cool: linear-gradient(135deg, var(--cyan), var(--violet));
-  --shadow: 0 30px 90px rgba(4, 2, 16, 0.55);
-  --shadow-soft: 0 16px 46px rgba(4, 2, 16, 0.4);
+  --gradient-brand: linear-gradient(110deg, var(--lime), var(--cyan) 70%);
+  --shadow: 0 30px 90px rgba(2, 4, 3, 0.55);
+  --shadow-soft: 0 16px 46px rgba(2, 4, 3, 0.4);
 
   font-family: "Poppins", "Inter", ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", sans-serif;
@@ -36,10 +34,9 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 12% -10%, rgba(139, 92, 246, 0.35), transparent 42%),
-    radial-gradient(circle at 88% 0%, rgba(34, 211, 238, 0.22), transparent 40%),
-    radial-gradient(circle at 50% 120%, rgba(236, 72, 153, 0.18), transparent 45%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 55%, #08050f 100%);
+    radial-gradient(circle at 12% -8%, rgba(163, 230, 53, 0.05), transparent 30%),
+    radial-gradient(circle at 88% 0%, rgba(34, 211, 238, 0.07), transparent 32%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 55%, #050605 100%);
   color: var(--text);
   min-height: 100vh;
 }
@@ -95,7 +92,7 @@ h3 {
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--surface);
-  color: #e4defc;
+  color: #e2ede4;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -137,8 +134,8 @@ h3 {
 
 .button--primary {
   background: var(--gradient-brand);
-  color: #0a0714;
-  box-shadow: 0 14px 34px rgba(236, 72, 153, 0.35);
+  color: var(--bg);
+  box-shadow: 0 14px 34px rgba(34, 211, 238, 0.3);
 }
 
 .button--whatsapp {
@@ -185,22 +182,19 @@ h3 {
 }
 
 .nav__brand-mark {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 38px;
   height: 38px;
-  border-radius: 12px;
-  background: var(--gradient-cool);
-  color: #06070f;
-  font-size: 0.72rem;
-  font-weight: 800;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px var(--line);
 }
 
 .nav__links {
   display: flex;
   gap: 28px;
   font-weight: 600;
-  color: #d8d2f2;
+  color: #d7e6da;
 }
 
 .nav__links a:hover {
@@ -238,15 +232,16 @@ h3 {
   height: 420px;
   top: -140px;
   left: -120px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.55), transparent 70%);
+  background: radial-gradient(circle, rgba(163, 230, 53, 0.14), transparent 70%);
 }
 
 .hero__glow--2 {
-  width: 380px;
-  height: 380px;
-  bottom: -160px;
-  right: -100px;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.4), transparent 70%);
+  width: 460px;
+  height: 460px;
+  bottom: -240px;
+  right: -180px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.14), transparent 68%);
+  filter: blur(100px);
 }
 
 .hero__copy {
@@ -401,7 +396,7 @@ h3 {
 .marquee-band__track span::after {
   content: "◆";
   margin-left: 26px;
-  color: var(--magenta);
+  color: var(--lime);
 }
 
 @keyframes marquee {
@@ -461,14 +456,14 @@ h3 {
 }
 
 .category-chip:hover {
-  border-color: rgba(236, 72, 153, 0.5);
+  border-color: rgba(163, 230, 53, 0.5);
   color: var(--text);
 }
 
 .category-chip.is-active {
   background: var(--gradient-brand);
   border-color: transparent;
-  color: #0a0714;
+  color: var(--bg);
 }
 
 /* ---------- Product grid & card ---------- */
@@ -494,7 +489,7 @@ h3 {
 
 .product-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(139, 92, 246, 0.55);
+  border-color: rgba(34, 211, 238, 0.5);
   box-shadow: var(--shadow);
 }
 
@@ -502,7 +497,7 @@ h3 {
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #150f28;
+  background: #0d1512;
 }
 
 .product-card__img {
@@ -540,14 +535,14 @@ h3 {
   left: 12px;
   padding: 5px 12px;
   border-radius: 999px;
-  background: rgba(10, 7, 20, 0.65);
+  background: rgba(6, 9, 7, 0.65);
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.16);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #eae5ff;
+  color: #e7f3ea;
 }
 
 .product-card__count {
@@ -556,12 +551,12 @@ h3 {
   right: 12px;
   padding: 5px 10px;
   border-radius: 999px;
-  background: rgba(10, 7, 20, 0.65);
+  background: rgba(6, 9, 7, 0.65);
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.16);
   font-size: 0.68rem;
   font-weight: 600;
-  color: #eae5ff;
+  color: #e7f3ea;
 }
 
 .product-card__body {
@@ -634,7 +629,7 @@ h3 {
   height: 40px;
   border-radius: 999px;
   background: var(--gradient-brand);
-  color: #0a0714;
+  color: var(--bg);
   font-weight: 800;
 }
 
@@ -667,7 +662,7 @@ h3 {
 }
 
 .highlight-card span {
-  color: var(--magenta);
+  color: var(--cyan);
   text-transform: uppercase;
   font-size: 0.7rem;
   font-weight: 700;
@@ -739,7 +734,7 @@ h3 {
   padding: 40px 32px;
   border-radius: 30px;
   border: 1px solid var(--line);
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(34, 211, 238, 0.1));
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.12), rgba(163, 230, 53, 0.07));
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -752,7 +747,7 @@ h3 {
   inset: -60% -20% auto auto;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(236, 72, 153, 0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
   filter: blur(40px);
 }
 
@@ -825,7 +820,7 @@ h3 {
   border-radius: 26px;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: #120d24;
+  background: #0d1110;
   box-shadow: var(--shadow);
   aspect-ratio: 4 / 3;
 }
@@ -867,7 +862,7 @@ h3 {
 
 .product-detail__thumb.is-active {
   opacity: 1;
-  border-color: var(--magenta);
+  border-color: var(--cyan);
 }
 
 .product-detail__info {

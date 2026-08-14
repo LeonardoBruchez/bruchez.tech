@@ -219,7 +219,8 @@ h3 {
   grid-template-columns: 1.15fr 0.85fr;
   gap: 32px;
   align-items: center;
-  padding: 40px 8px 60px;
+  padding: clamp(40px, 6vw, 64px) clamp(20px, 5vw, 48px) clamp(56px, 7vw, 80px);
+  border-radius: 32px;
 }
 
 .hero__glow {

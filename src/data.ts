@@ -58,14 +58,14 @@ export const products: Product[] = [
   },
   {
     slug: "suporte-celular-qrcode",
-    name: "Suporte de Celular com QR Code",
+    name: "Placa de QR Code",
     category: "Suportes",
-    tagline: "Suporte funcional com QR code impresso em relevo",
+    tagline: "QR code impresso em relevo, com base própria para ficar em pé",
     description:
-      "Suporte de mesa para celular com um QR code impresso em relevo na base, ideal para divulgar Instagram, cardápio, Pix ou portfólio de forma criativa enquanto segura o aparelho.",
+      "Placa de mesa com um QR code impresso em relevo, ideal para divulgar Instagram, cardápio, Pix ou portfólio de forma criativa no balcão.",
     features: [
       "QR code gerado sob encomenda para o seu link",
-      "Encaixe estável para celulares de vários tamanhos",
+      "Fica em pé sozinha, sem precisar de suporte extra",
       "Ótimo para balcão de loja, feira ou mesa de trabalho",
       "Acabamento branco limpo",
     ],

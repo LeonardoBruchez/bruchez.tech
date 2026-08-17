@@ -13,8 +13,8 @@ import { makeLinkHandler } from "../router";
 
 const showcaseSlugs = [
   "vaso-espiral",
-  "suporte-controle-banguela",
-  "chaveiro-jesus",
+  "modelo-dental",
+  "suporte-celular-qrcode",
   "placa-confie-em-deus",
 ];
 

@@ -20,6 +20,10 @@ export const genericWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encod
   "Olá! Vim do site bruchez.tech e quero saber mais sobre as peças em impressão 3D.",
 )}`;
 
+export const customRequestWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  "Olá! Vim do site bruchez.tech. Tenho algo em mente que não vi no catálogo, dá pra fazer sob encomenda?",
+)}`;
+
 export const categories = [
   "Todos",
   "Decoração",

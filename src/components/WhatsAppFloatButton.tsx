@@ -7,6 +7,7 @@ export default function WhatsAppFloatButton() {
       href={customRequestWhatsappLink}
       target="_blank"
       rel="noreferrer"
+      aria-label="Não achou o que queria? Peça algo personalizado no WhatsApp"
     >
       <span className="whatsapp-float__icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">

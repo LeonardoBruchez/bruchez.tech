@@ -23,8 +23,33 @@ type HomePageProps = {
   navigate: (to: string) => void;
 };
 
+function getCategoryFromUrl(): string {
+  const value = new URLSearchParams(window.location.search).get("categoria");
+  return value && (categories as readonly string[]).includes(value)
+    ? value
+    : "Todos";
+}
+
 export default function HomePage({ navigate }: HomePageProps) {
-  const [activeCategory, setActiveCategory] = useState<string>("Todos");
+  const [activeCategory, setActiveCategoryState] = useState<string>(
+    getCategoryFromUrl,
+  );
+
+  const setActiveCategory = (category: string) => {
+    setActiveCategoryState(category);
+    const params = new URLSearchParams(window.location.search);
+    if (category === "Todos") {
+      params.delete("categoria");
+    } else {
+      params.set("categoria", category);
+    }
+    const query = params.toString();
+    window.history.replaceState(
+      {},
+      "",
+      `${window.location.pathname}${query ? `?${query}` : ""}`,
+    );
+  };
 
   const filteredProducts = useMemo(() => {
     if (activeCategory === "Todos") return products;

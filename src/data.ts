@@ -8,8 +8,8 @@ export type Product = {
   images: string[];
 };
 
-export const phoneNumber = "+55 48 9830-1531";
-export const whatsappNumber = "554898301531";
+export const phoneNumber = "+55 48 99830-1531";
+export const whatsappNumber = "5548998301531";
 export const contactEmail = "leonardobruchez.code@gmail.com";
 
 export function whatsappLinkFor(product: Product) {

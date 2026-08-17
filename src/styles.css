@@ -208,6 +208,28 @@ h3 {
   .nav__links {
     display: none;
   }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .nav__brand {
+    min-width: 0;
+  }
+
+  .nav__brand span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .nav > .button--whatsapp {
+    width: auto;
+    flex-shrink: 0;
+    padding: 0 16px;
+    min-height: 42px;
+    font-size: 0.8rem;
+  }
 }
 
 /* ---------- Hero ---------- */
@@ -824,6 +846,23 @@ h3 {
 
 @media (max-width: 760px) {
   .whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+    padding: 0;
+    width: 52px;
+    height: 52px;
+    gap: 0;
+    justify-content: center;
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
+  }
+
+  .whatsapp-float__icon {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+  }
+
+  .whatsapp-float__text {
     display: none;
   }
 }

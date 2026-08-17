@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import {
   categories,
+  contactEmail,
   faq,
   genericWhatsappLink,
   highlights,
@@ -231,6 +232,7 @@ export default function HomePage({ navigate }: HomePageProps) {
       <footer className="footer">
         <span>Bruchez 3D · Impressão 3D sob encomenda</span>
         <span>{phoneNumber}</span>
+        <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
       </footer>
     </main>
   );

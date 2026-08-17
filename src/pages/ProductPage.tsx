@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import { Product, products, whatsappLinkFor } from "../data";
+import { contactEmail, Product, products, whatsappLinkFor } from "../data";
 import { makeLinkHandler } from "../router";
 
 type ProductPageProps = {
@@ -158,6 +158,7 @@ export default function ProductPage({ product, navigate }: ProductPageProps) {
 
       <footer className="footer">
         <span>Bruchez 3D · Impressão 3D sob encomenda</span>
+        <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
         <a href="/" onClick={makeLinkHandler(navigate, "/")}>
           Voltar para o início
         </a>

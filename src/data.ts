@@ -10,6 +10,7 @@ export type Product = {
 
 export const phoneNumber = "+55 48 9830-1531";
 export const whatsappNumber = "554898301531";
+export const contactEmail = "leonardobruchez.code@gmail.com";
 
 export function whatsappLinkFor(product: Product) {
   const message = `Olá! Vim do site bruchez.tech e tenho interesse em: ${product.name}.`;

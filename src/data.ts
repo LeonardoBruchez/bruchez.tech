@@ -375,18 +375,19 @@ export const products: Product[] = [
   },
   {
     slug: "chaveiro-instagram",
-    name: "Chaveiro Instagram",
+    name: "Chaveiro Instagram NFC",
     category: "Chaveiros",
-    tagline: "Logo do Instagram em chaveiro colorido",
+    tagline: "Logo do Instagram com tag NFC — encoste o celular e abre seu perfil",
     description:
-      "Chaveiro com o ícone do Instagram, nas cores originais do app. Leve, resistente e chamativo — ótimo pra quem cria conteúdo ou quer um chaveiro diferente.",
+      "Chaveiro com o ícone do Instagram, nas cores originais do app, com uma tag NFC embutida: quem encostar o celular é levado direto pro seu perfil, sem precisar digitar @usuário. Leve, resistente e chamativo.",
     features: [
+      "Tag NFC configurada com o link do seu perfil",
       "Cores fiéis ao ícone original",
       "Argola e correntinha de metal inclusas",
       "Leve e resistente ao uso diário",
-      "Ótimo pra revenda ou brinde",
     ],
     images: ["chaveiro-instagram-01.jpg", "chaveiro-instagram-02.jpg"],
+    priceFrom: 45,
   },
 ];
 

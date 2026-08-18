@@ -11,6 +11,7 @@ import {
   serviceSteps,
 } from "../data";
 import ProductCard from "../components/ProductCard";
+import ColorLightbox from "../components/ColorLightbox";
 import { makeLinkHandler } from "../router";
 
 const showcaseSlugs = [
@@ -34,6 +35,9 @@ function getCategoryFromUrl(): string {
 export default function HomePage({ navigate }: HomePageProps) {
   const [activeCategory, setActiveCategoryState] = useState<string>(
     getCategoryFromUrl,
+  );
+  const [activeColorIndex, setActiveColorIndex] = useState<number | null>(
+    null,
   );
 
   const setActiveCategory = (category: string) => {
@@ -236,18 +240,31 @@ export default function HomePage({ navigate }: HomePageProps) {
         </div>
 
         <div className="color-grid">
-          {filamentColors.map((color) => (
-            <div key={color.name} className="color-swatch">
+          {filamentColors.map((color, index) => (
+            <button
+              key={color.name}
+              type="button"
+              className="color-swatch"
+              onClick={() => setActiveColorIndex(index)}
+            >
               <img
                 src={`/products/filamentos/${color.image}`}
                 alt={`Filamento na cor ${color.name}`}
                 loading="lazy"
               />
               <span>{color.name}</span>
-            </div>
+            </button>
           ))}
         </div>
       </section>
+
+      {activeColorIndex !== null && (
+        <ColorLightbox
+          activeIndex={activeColorIndex}
+          onClose={() => setActiveColorIndex(null)}
+          onNavigate={setActiveColorIndex}
+        />
+      )}
 
       <section className="section faq-section" id="faq">
         <div className="section__heading">

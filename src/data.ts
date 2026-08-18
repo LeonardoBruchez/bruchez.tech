@@ -27,6 +27,11 @@ export function whatsappLinkFor(product: Product) {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
+export function colorWhatsappLink(colorName: string) {
+  const message = `Olá! Vim do site bruchez.tech. Quero um produto com a cor ${colorName}.`;
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
 export const genericWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
   "Olá! Vim do site bruchez.tech e quero saber mais sobre as peças em impressão 3D.",
 )}`;
@@ -248,8 +253,8 @@ export const products: Product[] = [
     images: ["dentadura-modelo-dental.jpg"],
   },
   {
-    slug: "nome-personalizado",
-    name: "Nome Decorativo Personalizado",
+    slug: "letreiro-personalizado",
+    name: "Letreiro Decorativo Personalizado",
     category: "Personalizado",
     tagline: "Letra e nome montados em 3D para presentear",
     description:
@@ -390,6 +395,11 @@ export const faq = [
     question: "Como funciona o pagamento e a entrega?",
     answer:
       "Isso é combinado direto no WhatsApp depois de definirmos a peça, cor e prazo. Atendo entrega local e envio para outras cidades.",
+  },
+  {
+    question: "Qual o prazo de entrega?",
+    answer:
+      "O prazo mínimo é de 2 dias, mas sempre confirmo a disponibilidade certinha no WhatsApp antes de fechar o pedido. Para pedidos em quantidade maior, o prazo aumenta conforme o número de peças.",
   },
   {
     question: "Posso mandar uma referência ou ideia própria?",

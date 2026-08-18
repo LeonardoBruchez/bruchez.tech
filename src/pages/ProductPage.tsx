@@ -104,6 +104,9 @@ export default function ProductPage({ product, navigate }: ProductPageProps) {
               {formatPriceFrom(product.priceFrom)}
             </p>
           )}
+          {product.bulkPricing && (
+            <p className="product-detail__bulk">{product.bulkPricing}</p>
+          )}
           <p className="product-detail__description">{product.description}</p>
 
           <ul className="product-detail__features">

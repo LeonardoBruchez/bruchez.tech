@@ -714,6 +714,35 @@ h3 {
   }
 }
 
+/* ---------- Cores disponiveis ---------- */
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.color-swatch {
+  display: grid;
+  gap: 10px;
+  text-align: center;
+}
+
+.color-swatch img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.color-swatch span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
 /* ---------- FAQ ---------- */
 
 .faq-list {
@@ -1002,6 +1031,12 @@ h3 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.product-detail__bulk {
+  color: var(--cyan);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .product-detail__description {

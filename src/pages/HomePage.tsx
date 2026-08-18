@@ -3,6 +3,7 @@ import {
   categories,
   contactEmail,
   faq,
+  filamentColors,
   genericWhatsappLink,
   highlights,
   phoneNumber,
@@ -76,6 +77,7 @@ export default function HomePage({ navigate }: HomePageProps) {
         <nav className="nav__links">
           <a href="#catalogo">Catálogo</a>
           <a href="#como-funciona">Como funciona</a>
+          <a href="#cores">Cores</a>
           <a href="#faq">Dúvidas</a>
         </nav>
         <a
@@ -218,6 +220,31 @@ export default function HomePage({ navigate }: HomePageProps) {
               <h3>{highlight.title}</h3>
               <p>{highlight.subtitle}</p>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="cores">
+        <div className="section__heading">
+          <p className="eyebrow">Cores disponíveis</p>
+          <h2>Cores reais do filamento que uso pra imprimir.</h2>
+          <p className="section__support">
+            Fotos tiradas aqui, sem filtro — a cor da peça final pode variar
+            um pouco conforme o brilho e a luz. Não achou a cor que queria?
+            Chama no WhatsApp que eu confirmo a disponibilidade.
+          </p>
+        </div>
+
+        <div className="color-grid">
+          {filamentColors.map((color) => (
+            <div key={color.name} className="color-swatch">
+              <img
+                src={`/products/filamentos/${color.image}`}
+                alt={`Filamento na cor ${color.name}`}
+                loading="lazy"
+              />
+              <span>{color.name}</span>
+            </div>
           ))}
         </div>
       </section>

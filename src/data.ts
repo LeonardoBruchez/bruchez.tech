@@ -7,6 +7,7 @@ export type Product = {
   features: string[];
   images: string[];
   priceFrom?: number;
+  bulkPricing?: string;
 };
 
 export const phoneNumber = "+55 48 99830-1531";
@@ -164,6 +165,8 @@ export const products: Product[] = [
       "Leve e resistente ao dia a dia",
     ],
     images: ["chaveiro-dia-dos-pais.webp"],
+    priceFrom: 8.9,
+    bulkPricing: "A partir de 40 unidades: R$ 5,00 cada",
   },
   {
     slug: "chaveiro-labios",
@@ -179,6 +182,8 @@ export const products: Product[] = [
       "Ótimo para vender em kits ou avulso",
     ],
     images: ["chaveiro-labios.jpg"],
+    priceFrom: 8.9,
+    bulkPricing: "A partir de 40 unidades: R$ 5,00 cada",
   },
   {
     slug: "vaso-espiral",
@@ -196,12 +201,12 @@ export const products: Product[] = [
     images: ["vaso-espiral-roxo.jpg", "vaso-espiral-azul.jpg"],
   },
   {
-    slug: "engrenagem-mandala",
-    name: "Engrenagem Mandala",
+    slug: "fidget-spinner-engrenagens",
+    name: "Fidget Spinner de Engrenagens",
     category: "Curiosidades",
-    tagline: "Peça articulada com engrenagens reais que giram",
+    tagline: "Fidget spinner com engrenagens reais que giram",
     description:
-      "Peça em formato de mandala com engrenagens internas totalmente funcionais: gire a peça central e todas as outras giram junto. Um fidget toy vistoso, impresso em uma peça só, sem montagem.",
+      "Fidget spinner em formato de mandala com engrenagens internas totalmente funcionais: gire a peça central e todas as outras giram junto. Vistoso e viciante, impresso em uma peça só, sem montagem.",
     features: [
       "Engrenagens funcionam de verdade, sem montagem",
       "Impressa em uma única peça (print-in-place)",
@@ -209,6 +214,7 @@ export const products: Product[] = [
       "Disponível em várias cores",
     ],
     images: ["engrenagem-mandala-amarela.jpg"],
+    priceFrom: 35,
   },
   {
     slug: "suporte-clamp-branco",
@@ -224,6 +230,7 @@ export const products: Product[] = [
       "Feito sob medida para o seu uso",
     ],
     images: ["suporte-clamp-branco-01.jpg", "suporte-clamp-branco-02.jpg"],
+    priceFrom: 35,
   },
   {
     slug: "modelo-dental",
@@ -258,18 +265,19 @@ export const products: Product[] = [
   },
   {
     slug: "chaveiro-jesus",
-    name: "Chaveiro Jesus",
+    name: "Chaveiro Personalizado com Nome",
     category: "Chaveiros",
-    tagline: "Chaveiro em fonte cursiva para uso diário",
+    tagline: "Chaveiro em fonte cursiva com o nome ou palavra que você quiser",
     description:
-      "Chaveiro com a palavra \"Jesus\" em fonte cursiva, impresso em filamento roxo com leve efeito metalizado. Um item de fé simples para carregar todo dia.",
+      "Chaveiro em fonte cursiva personalizado com o nome, palavra ou frase curta que você escolher. Na foto, o modelo \"Jesus\", impresso em filamento roxo com leve efeito metalizado.",
     features: [
+      "Personalizado com o nome ou palavra que você quiser",
       "Argola e correntinha de metal inclusas",
       "Leve e resistente ao uso diário",
       "Disponível em várias cores",
-      "Ótimo para vender em igrejas e bazares",
     ],
     images: ["chaveiro-jesus.jpg"],
+    priceFrom: 7,
   },
   {
     slug: "chaveiro-halteres-fitness",
@@ -305,6 +313,39 @@ export const products: Product[] = [
     ],
     images: ["anuncio-brinquedo-gato.jpg"],
   },
+  {
+    slug: "suporte-nfc-whatsapp",
+    name: "Suporte de Aproximação NFC para WhatsApp",
+    category: "Suportes",
+    tagline: "Encoste o celular e o WhatsApp abre sozinho",
+    description:
+      "Placa de mesa com tag NFC embutida: a pessoa só encosta o celular e o WhatsApp já abre direto na sua conversa, sem precisar escanear QR code ou salvar número. Ótimo para balcão de loja, recepção ou estande de feira.",
+    features: [
+      "Tag NFC configurada com o seu WhatsApp",
+      "Funciona só de encostar o celular, sem app extra",
+      "Design com o ícone do WhatsApp em relevo",
+      "Ótimo para loja, consultório, feira e recepção",
+    ],
+    images: ["suporte-nfc-whatsapp-01.jpg", "suporte-nfc-whatsapp-02.jpg"],
+  },
+];
+
+export const filamentColors = [
+  { name: "Azul", image: "azul.jpg" },
+  { name: "Azul com Roxo (Dual Color)", image: "azul-roxo-dual-color.jpg" },
+  {
+    name: "Vermelho com Preto (Dual Color)",
+    image: "vermelho-preto-dual-color-01.jpg",
+  },
+  { name: "Amarelo", image: "amarelo.jpg" },
+  { name: "Bege", image: "bege.jpg" },
+  { name: "Branco", image: "branco.jpg" },
+  { name: "Branco (PETG)", image: "branco-petg.jpg" },
+  { name: "Dourado", image: "dourado.jpg" },
+  { name: "Preto", image: "preto.jpg" },
+  { name: "Rosa", image: "rosa.jpg" },
+  { name: "Verde", image: "verde.jpg" },
+  { name: "Vermelho", image: "vermelho.jpg" },
 ];
 
 export const highlights = [

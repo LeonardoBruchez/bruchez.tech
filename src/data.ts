@@ -72,6 +72,7 @@ export const products: Product[] = [
       "suporte-controle-banguela-frente.jpg",
       "suporte-controle-banguela-costas.jpg",
     ],
+    priceFrom: 90,
   },
   {
     slug: "suporte-celular-qrcode",
@@ -140,6 +141,7 @@ export const products: Product[] = [
       "Disponível em diferentes cores",
     ],
     images: ["pote-organizador-aberto.jpg", "pote-organizador-fechado.jpg"],
+    priceFrom: 25,
   },
   {
     slug: "placa-confie-em-deus",
@@ -252,6 +254,7 @@ export const products: Product[] = [
       "Também serve como peça decorativa de consultório",
     ],
     images: ["dentadura-modelo-dental.jpg"],
+    priceFrom: 100,
   },
   {
     slug: "letreiro-personalizado",
@@ -319,6 +322,7 @@ export const products: Product[] = [
       "Fácil de limpar",
     ],
     images: ["anuncio-brinquedo-gato.jpg"],
+    priceFrom: 35,
   },
   {
     slug: "suporte-nfc-whatsapp",
@@ -335,6 +339,7 @@ export const products: Product[] = [
     ],
     images: ["suporte-nfc-whatsapp-01.jpg", "suporte-nfc-whatsapp-02.jpg"],
     imagePosition: "center 10%",
+    priceFrom: 47,
   },
   {
     slug: "fidget-ovo-dragao",

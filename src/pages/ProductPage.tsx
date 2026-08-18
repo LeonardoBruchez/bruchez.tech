@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import { contactEmail, Product, products, whatsappLinkFor } from "../data";
+import {
+  contactEmail,
+  formatPriceFrom,
+  Product,
+  products,
+  whatsappLinkFor,
+} from "../data";
 import { makeLinkHandler } from "../router";
 
 type ProductPageProps = {
@@ -93,6 +99,11 @@ export default function ProductPage({ product, navigate }: ProductPageProps) {
           <span className="pill">{product.category}</span>
           <h1>{product.name}</h1>
           <p className="product-detail__tagline">{product.tagline}</p>
+          {product.priceFrom && (
+            <p className="product-detail__price">
+              {formatPriceFrom(product.priceFrom)}
+            </p>
+          )}
           <p className="product-detail__description">{product.description}</p>
 
           <ul className="product-detail__features">

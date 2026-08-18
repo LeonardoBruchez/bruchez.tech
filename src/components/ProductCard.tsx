@@ -1,4 +1,4 @@
-import type { Product } from "../data";
+import { formatPriceFrom, type Product } from "../data";
 import { makeLinkHandler } from "../router";
 
 type ProductCardProps = {
@@ -41,6 +41,11 @@ export default function ProductCard({ product, navigate }: ProductCardProps) {
       <div className="product-card__body">
         <h3>{product.name}</h3>
         <p>{product.tagline}</p>
+        {product.priceFrom && (
+          <span className="product-card__price">
+            {formatPriceFrom(product.priceFrom)}
+          </span>
+        )}
         <span className="product-card__cta">
           Ver detalhes
           <svg

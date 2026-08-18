@@ -600,6 +600,15 @@ h3 {
   line-height: 1.5;
 }
 
+.product-card__price {
+  font-weight: 800;
+  font-size: 0.95rem;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .product-card__cta {
   display: inline-flex;
   align-items: center;
@@ -984,6 +993,15 @@ h3 {
   color: var(--cyan);
   font-weight: 600;
   font-size: 1.02rem;
+}
+
+.product-detail__price {
+  font-weight: 800;
+  font-size: 1.4rem;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .product-detail__description {

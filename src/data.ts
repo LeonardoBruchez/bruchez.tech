@@ -6,11 +6,20 @@ export type Product = {
   description: string;
   features: string[];
   images: string[];
+  priceFrom?: number;
 };
 
 export const phoneNumber = "+55 48 99830-1531";
 export const whatsappNumber = "5548998301531";
 export const contactEmail = "leonardobruchez.code@gmail.com";
+
+export function formatPriceFrom(priceFrom: number) {
+  const formatted = priceFrom.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+  return `A partir de ${formatted}`;
+}
 
 export function whatsappLinkFor(product: Product) {
   const message = `Olá! Vim do site bruchez.tech e tenho interesse em: ${product.name}.`;
@@ -71,6 +80,7 @@ export const products: Product[] = [
       "Acabamento branco limpo",
     ],
     images: ["suporte-celular-qrcode.jpg"],
+    priceFrom: 30,
   },
   {
     slug: "adaptador-bateria",
@@ -91,6 +101,7 @@ export const products: Product[] = [
       "adaptador-bateria-03.jpg",
       "anuncio-adaptador-bateria.jpg",
     ],
+    priceFrom: 100,
   },
   {
     slug: "porta-canetas-jaqueta",
@@ -106,6 +117,7 @@ export const products: Product[] = [
       "Ótimo item para presente criativo",
     ],
     images: ["porta-canetas-jaqueta.jpg"],
+    priceFrom: 37.9,
   },
   {
     slug: "pote-organizador",
@@ -136,6 +148,7 @@ export const products: Product[] = [
       "Também fazemos outras frases sob encomenda",
     ],
     images: ["placa-confie-em-deus.jpg"],
+    priceFrom: 49.9,
   },
   {
     slug: "chaveiro-dia-dos-pais",
@@ -241,6 +254,7 @@ export const products: Product[] = [
       "Acabamento liso e pintável",
     ],
     images: ["letra-m-marrie.jpg"],
+    priceFrom: 49.9,
   },
   {
     slug: "chaveiro-jesus",
@@ -274,6 +288,7 @@ export const products: Product[] = [
       "chaveiros-halteres-fitness-01.jpg",
       "chaveiros-halteres-fitness-02.jpg",
     ],
+    priceFrom: 10,
   },
   {
     slug: "brinquedo-gato",

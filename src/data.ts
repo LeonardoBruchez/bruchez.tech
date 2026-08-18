@@ -8,6 +8,7 @@ export type Product = {
   images: string[];
   priceFrom?: number;
   bulkPricing?: string;
+  imagePosition?: string;
 };
 
 export const phoneNumber = "+55 48 99830-1531";
@@ -266,6 +267,7 @@ export const products: Product[] = [
       "Acabamento liso e pintável",
     ],
     images: ["letra-m-marrie.jpg"],
+    imagePosition: "center 70%",
     priceFrom: 49.9,
   },
   {
@@ -332,6 +334,7 @@ export const products: Product[] = [
       "Ótimo para loja, consultório, feira e recepção",
     ],
     images: ["suporte-nfc-whatsapp-01.jpg", "suporte-nfc-whatsapp-02.jpg"],
+    imagePosition: "center 10%",
   },
 ];
 

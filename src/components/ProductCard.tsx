@@ -20,6 +20,7 @@ export default function ProductCard({ product, navigate }: ProductCardProps) {
           src={`/products/${product.images[0]}`}
           alt={product.name}
           loading="lazy"
+          style={product.imagePosition ? { objectPosition: product.imagePosition } : undefined}
           className="product-card__img product-card__img--front"
         />
         {product.images[1] && (
@@ -28,6 +29,7 @@ export default function ProductCard({ product, navigate }: ProductCardProps) {
             alt=""
             aria-hidden="true"
             loading="lazy"
+            style={product.imagePosition ? { objectPosition: product.imagePosition } : undefined}
             className="product-card__img product-card__img--back"
           />
         )}

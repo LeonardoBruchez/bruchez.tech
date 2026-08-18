@@ -73,6 +73,11 @@ export default function ProductPage({ product, navigate }: ProductPageProps) {
             <img
               src={`/products/${product.images[activeImage]}`}
               alt={product.name}
+              style={
+                product.imagePosition
+                  ? { objectPosition: product.imagePosition }
+                  : undefined
+              }
             />
           </div>
           {product.images.length > 1 && (

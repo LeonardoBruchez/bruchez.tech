@@ -336,6 +336,58 @@ export const products: Product[] = [
     images: ["suporte-nfc-whatsapp-01.jpg", "suporte-nfc-whatsapp-02.jpg"],
     imagePosition: "center 10%",
   },
+  {
+    slug: "fidget-ovo-dragao",
+    name: "Fidget Ovo de Dragão",
+    category: "Curiosidades",
+    tagline: "Ovo sensorial que se abre em espiral, print-in-place",
+    description:
+      "Ovo decorativo com textura de escamas de dragão que se transforma: puxe e ele se abre em uma espiral longa, tipo cauda ou chama. Impresso em uma peça só, sem montagem, ótimo pra mexer com as mãos e aliviar estresse.",
+    features: [
+      "Se transforma: fecha como ovo ou abre em espiral",
+      "Impresso em uma única peça (print-in-place)",
+      "Ótimo fidget toy anti-estresse",
+      "Item bonito de vitrine, chama atenção",
+    ],
+    images: [
+      "ovo-dragao.jpg",
+      "espiral-dourada-01.jpg",
+      "espiral-dourada-02.jpg",
+      "espiral-dourada-03.jpg",
+    ],
+    priceFrom: 35,
+  },
+  {
+    slug: "pote-coracao-personalizado",
+    name: "Pote de Coração Personalizado",
+    category: "Personalizado",
+    tagline: "Caixinha em formato de coração com sua mensagem",
+    description:
+      "Caixa em formato de coração com tampa, personalizada com o nome ou mensagem que você quiser (ex: \"Eu te amo [nome]\"). Detalhe de corações em relevo nas laterais. Ótimo presente de aniversário, namoro ou data comemorativa.",
+    features: [
+      "Personalizada com o nome ou frase que você escolher",
+      "Tampa com encaixe, serve pra guardar bilhetes, joias ou docinhos",
+      "Detalhe de corações em relevo nas laterais",
+      "Ótimo presente de data comemorativa",
+    ],
+    images: ["pote-coracao-01.jpg", "pote-coracao-02.jpg"],
+    priceFrom: 50,
+  },
+  {
+    slug: "chaveiro-instagram",
+    name: "Chaveiro Instagram",
+    category: "Chaveiros",
+    tagline: "Logo do Instagram em chaveiro colorido",
+    description:
+      "Chaveiro com o ícone do Instagram, nas cores originais do app. Leve, resistente e chamativo — ótimo pra quem cria conteúdo ou quer um chaveiro diferente.",
+    features: [
+      "Cores fiéis ao ícone original",
+      "Argola e correntinha de metal inclusas",
+      "Leve e resistente ao uso diário",
+      "Ótimo pra revenda ou brinde",
+    ],
+    images: ["chaveiro-instagram-01.jpg", "chaveiro-instagram-02.jpg"],
+  },
 ];
 
 export const filamentColors = [

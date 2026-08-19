@@ -207,6 +207,7 @@ export const products: Product[] = [
       "Também funciona como suporte para flores secas",
     ],
     images: ["vaso-espiral-roxo.jpg", "vaso-espiral-azul.jpg"],
+    priceFrom: 48.7,
   },
   {
     slug: "fidget-spinner-engrenagens",
@@ -277,14 +278,14 @@ export const products: Product[] = [
     slug: "chaveiro-jesus",
     name: "Chaveiro Personalizado com Nome",
     category: "Chaveiros",
-    tagline: "Chaveiro em fonte cursiva com o nome ou palavra que você quiser",
+    tagline: "Chaveiro com o nome ou palavra que você quiser, em qualquer fonte",
     description:
-      "Chaveiro em fonte cursiva personalizado com o nome, palavra ou frase curta que você escolher. Exemplos na foto: \"Jesus\", \"Beatriz\" e \"MaxArthur\", em cores diferentes.",
+      "Chaveiro personalizado com o nome, palavra ou frase curta que você escolher, em qualquer fonte disponível (não só cursiva). Exemplos na foto: \"Jesus\", \"Beatriz\" e \"MaxArthur\", em cores diferentes.",
     features: [
       "Personalizado com o nome ou palavra que você quiser",
+      "Disponível em várias fontes, não só cursiva",
       "Argola e correntinha de metal inclusas",
       "Leve e resistente ao uso diário",
-      "Disponível em várias cores",
     ],
     images: ["chaveiro-jesus.jpg", "chaveiro-personalizado-exemplos.jpg"],
     priceFrom: 7,

@@ -676,9 +676,9 @@ h3 {
 }
 
 .hero__stat-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 13px;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
   flex-shrink: 0;
   display: flex;
   align-items: center;

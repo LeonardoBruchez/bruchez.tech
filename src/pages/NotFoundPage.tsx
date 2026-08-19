@@ -1,5 +1,6 @@
 import { genericWhatsappLink } from "../data";
 import { makeLinkHandler } from "../router";
+import Header from "../components/Header";
 
 type NotFoundPageProps = {
   navigate: (to: string) => void;
@@ -8,26 +9,11 @@ type NotFoundPageProps = {
 export default function NotFoundPage({ navigate }: NotFoundPageProps) {
   return (
     <main className="page">
-      <header className="nav">
-        <a
-          href="/"
-          className="nav__brand"
-          onClick={makeLinkHandler(navigate, "/")}
-        >
-          <img className="nav__brand-mark" src="/logo.jpeg" alt="Bruchez3D" />
-          <span>
-            Bruchez<strong>3D</strong>
-          </span>
-        </a>
-        <a
-          className="button button--whatsapp"
-          href={genericWhatsappLink}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Falar no WhatsApp
-        </a>
-      </header>
+      <Header
+        navigate={navigate}
+        ctaLabel="Falar no WhatsApp"
+        ctaHref={genericWhatsappLink}
+      />
 
       <section className="section">
         <div className="section__heading">
@@ -59,7 +45,7 @@ export default function NotFoundPage({ navigate }: NotFoundPageProps) {
       </section>
 
       <footer className="footer">
-        <span>Bruchez 3D · Impressão 3D sob encomenda</span>
+        <span>BruchezTech · Impressão 3D sob encomenda</span>
         <a href="/" onClick={makeLinkHandler(navigate, "/")}>
           Voltar para o início
         </a>

@@ -1,4 +1,4 @@
-# Bruchez 3D
+# BruchezTech
 
 Catálogo online das minhas peças de impressão 3D — chaveiros, suportes, decoração, peças personalizadas e outras curiosidades. O objetivo é simples: a pessoa navega pelas categorias, vê a peça que quer e cai direto numa conversa no WhatsApp já com a mensagem pronta.
 

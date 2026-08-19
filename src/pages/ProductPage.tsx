@@ -8,6 +8,7 @@ import {
   whatsappLinkFor,
 } from "../data";
 import { makeLinkHandler } from "../router";
+import Header from "../components/Header";
 
 type ProductPageProps = {
   product: Product;
@@ -29,31 +30,18 @@ export default function ProductPage({ product, navigate }: ProductPageProps) {
 
   return (
     <main className="page">
-      <header className="nav">
-        <a
-          href="/"
-          className="nav__brand"
-          onClick={makeLinkHandler(navigate, "/")}
-        >
-          <img className="nav__brand-mark" src="/logo.jpeg" alt="Bruchez3D" />
-          <span>
-            Bruchez<strong>3D</strong>
-          </span>
-        </a>
-        <nav className="nav__links">
-          <a href="/#catalogo" onClick={makeLinkHandler(navigate, "/#catalogo")}>
-            Catálogo
-          </a>
-        </nav>
-        <a
-          className="button button--whatsapp"
-          href={whatsappLinkFor(product)}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Tenho interesse!
-        </a>
-      </header>
+      <Header
+        navigate={navigate}
+        links={[
+          {
+            label: "Catálogo",
+            href: "/#catalogo",
+            onClick: makeLinkHandler(navigate, "/#catalogo"),
+          },
+        ]}
+        ctaLabel="Tenho interesse!"
+        ctaHref={whatsappLinkFor(product)}
+      />
 
       <nav className="breadcrumb">
         <a href="/" onClick={makeLinkHandler(navigate, "/")}>
@@ -176,7 +164,7 @@ export default function ProductPage({ product, navigate }: ProductPageProps) {
       )}
 
       <footer className="footer">
-        <span>Bruchez 3D · Impressão 3D sob encomenda</span>
+        <span>BruchezTech · Impressão 3D sob encomenda</span>
         <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
         <a href="/" onClick={makeLinkHandler(navigate, "/")}>
           Voltar para o início

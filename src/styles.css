@@ -1,3 +1,43 @@
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/poppins-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/poppins-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/poppins-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/poppins-800.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/fonts/poppins-900.woff2") format("woff2");
+}
+
 :root {
   color-scheme: dark;
   --bg: #0a0714;
@@ -527,8 +567,8 @@ h3 {
   display: inline-block;
   font-size: clamp(3.4rem, 8vw, 5.6rem);
   font-weight: 900;
-  line-height: 0.78;
-  vertical-align: -0.1em;
+  line-height: 1;
+  vertical-align: -0.14em;
   margin: 0 2px;
   background: var(--gradient-brand);
   -webkit-background-clip: text;
@@ -596,7 +636,7 @@ h3 {
   border-radius: 20px;
   background: var(--surface);
   border: 1px solid var(--line);
-  max-width: 560px;
+  max-width: 620px;
   margin-top: 8px;
 }
 

@@ -1,0 +1,82 @@
+.printerBox {
+  width: 100%;
+  max-width: 440px;
+  overflow: hidden;
+  background: var(--bg-raised-2);
+  border: 1px solid var(--line-bright);
+  border-radius: var(--radius-lg);
+  padding: 22px 22px 18px;
+}
+
+.printerSvg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.bedPlate {
+  fill: var(--line-bright);
+}
+.bedTick {
+  stroke: var(--text-muted);
+  stroke-width: 1;
+}
+.gantryRail {
+  stroke: var(--line-bright);
+  stroke-width: 2;
+}
+.layerA {
+  fill: var(--layer);
+}
+.layerB {
+  fill: var(--layer-dim);
+}
+.nozzleArm {
+  fill: var(--line-bright);
+}
+.nozzleHead {
+  fill: var(--nozzle);
+}
+.nozzleTip {
+  fill: var(--gold);
+}
+
+.nozzleMotion {
+  animation: nozzle-move 1.6s ease-in-out infinite;
+  transform-origin: 160px 0;
+}
+
+@keyframes nozzle-move {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(46px);
+  }
+  75% {
+    transform: translateX(-46px);
+  }
+}
+
+.progressRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 10px;
+  text-transform: lowercase;
+}
+
+.progressTrack {
+  height: 4px;
+  background: var(--line-bright);
+  border-radius: 2px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--layer), var(--nozzle));
+  transition: width 0.1s linear;
+}
